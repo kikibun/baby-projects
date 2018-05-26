@@ -1,0 +1,5 @@
+friend, 90, 6, 10, friend.gif
+sexbomb, 7, 84, 100, sexbomb.gif
+posie, 50, 70, 50, posie.gif
+point of order, 35, 35, 35, point_of_order.gif
+ipad, 40, 50, 70, ipad.gif
