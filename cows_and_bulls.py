@@ -1,19 +1,23 @@
 import random
 
-numlist = '1234567890'
+numlist = ['1', '2', '3', '4', '5', '6', '7', '8',' 9', '0']
 
 def number_generator():
     number = ''
     for i in range(0,4):
-        number += random.choice(numlist)
-    print(number)
+        new_number = random.choice(numlist)
+        numlist.remove(new_number)
+        number += new_number
+    #print(number)
     return number
 
 def cowbull(number):
     cow = 0
     bull = 0
     guess = str(input('> '))
-    print(guess[0], number[0])
+    if guess == "HACK":
+        print(number)
+    #print(guess[0], number[0])
     for i in range(0,4):
         if guess[i] == number[i]:
             cow += 1
