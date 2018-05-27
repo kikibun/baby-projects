@@ -1,11 +1,15 @@
 import random
-global number
 
-number = str(random.randint(1000,9999))
+numlist = '1234567890'
 
-print(number)
+def number_generator():
+    number = ''
+    for i in range(0,4):
+        number += random.choice(numlist)
+    print(number)
+    return number
 
-def cowbull():
+def cowbull(number):
     cow = 0
     bull = 0
     guess = str(input('> '))
@@ -22,7 +26,9 @@ def cowbull():
         print('You did it!')
         return True
 
+random_number = number_generator()
+
 print('Guess a number')
 
-while not cowbull():
+while not cowbull(random_number):
     print('Guess again!')
