@@ -57,24 +57,19 @@ def winner(stat_a, stat_b):
     if fight_stat == 'battery':
         stat_a = robots[robota][0]
         stat_b = robots[robotb][0]
-        if stat_a > stat_b:
-            write('The winner is ' + robota + '!', font=style, align='center')
-        else:
-            write('The winner is ' + robotb + '!', font=style, align='center')
     elif fight_stat == 'intelligence':
         stat_a = robots[robota][1]
         stat_b = robots[robotb][1]
-        if stat_a > stat_b:
-            write('The winner is ' + robota + '!', font=style, align='center')
-        else:
-            write('The winner is ' + robotb + '!', font=style, align='center')
     elif fight_stat == 'sass':
         stat_a = robots[robota][2]
         stat_b = robots[robotb][2]
-        if stat_a > stat_b:
-            write('The winner is ' + robota + '!', font=style, align='center')
-        else:
-            write('The winner is ' + robotb + '!', font=style, align='center')
+
+    if int(stat_a) > int(stat_b):
+        write('The winner is ' + robota + '!', font=style, align='center')
+    else:
+        write('The winner is ' + robotb + '!', font=style, align='center')
+
+    
 
 if robotb in robots:
     print(robots[robotb])

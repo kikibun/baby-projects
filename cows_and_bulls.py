@@ -1,6 +1,6 @@
 import random
 
-numlist = ['1', '2', '3', '4', '5', '6', '7', '8',' 9', '0']
+numlist = ['1', '2', '3', '4', '5', '6', '7', '8','9', '0']
 
 def number_generator():
     number = ''
@@ -8,7 +8,6 @@ def number_generator():
         new_number = random.choice(numlist)
         numlist.remove(new_number)
         number += new_number
-    #print(number)
     return number
 
 def cowbull(number):
@@ -21,8 +20,11 @@ def cowbull(number):
     for i in range(0,4):
         if guess[i] == number[i]:
             cow += 1
-        elif guess[i] in number:
-            bull += 1
+        #elif guess[i] in number:
+         #   bull += 1
+        elif number[i] in guess:
+             bull += 1
+        
     #print(guess)
     print(cow, 'cows, ', bull, 'bulls')
 
