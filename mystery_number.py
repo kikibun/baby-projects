@@ -6,10 +6,10 @@ low_count = 0
 
 def guess_number(guess, high_count, low_count):
     print(guess)
-    print('high count is', high_count)
-    print('low count is', low_count)
+    #print('high count is', high_count)
+    #print('low count is', low_count)
     response = input('>')
-    while response == 'too high':
+    while response == 'too high' and low_count == 0:
         guess -= 10
         high_count += 1
         guess_number(guess, high_count, low_count)
